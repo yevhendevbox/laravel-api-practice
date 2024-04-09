@@ -17,7 +17,8 @@ class TaskResource extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'is_completed' => (bool) $this->is_completed
+            'is_completed' => (bool) $this->is_completed,
+            'date' => $this->created_at->format('Y-m-d H:i:s'),
         ];
     }
 }
